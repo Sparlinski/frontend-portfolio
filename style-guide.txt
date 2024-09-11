@@ -1,0 +1,8 @@
+FONTS
+
+font-family = 'Open Sans'
+font-weights = 300 to 800
+
+
+COLORS
+

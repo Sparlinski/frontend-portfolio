@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: aliceblue;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+}
+
+.side_trim {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #50e1a2;
+    height: 100vh;
+    width: 5em;
+    z-index: -1;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.off-screen_menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+    left: -250px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: flex;
+    padding: 2em;
+    transition: .3s ease;
+}
+
+.section_nav {
+    color: black;
+    list-style: none;
+}
+
+.menu_btn {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+
+
+
+
+/* MAIN */
+
+
+
+
+
+
+
+
+h1,
+h2 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-top: 2em;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+.green_font {
+    color: #50e1a2;
+}
+
+.profile {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.profile_pic {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
