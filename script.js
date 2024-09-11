@@ -10,16 +10,22 @@ menuBtn.addEventListener('click', () => {
     } else {
         offScreenMenu.style.left = '-250px';
     }
+    menuBtn.classList.toggle('active');
 });
 
 /* AUTO TYPING FUNCTION */
 
-const typingText = document.querySelector('h3 span')
-const words = ["...design.", "...creating.", "...problem-solving", "...building functional, easy to use products that people find value in and enjoy."]
+const typingText = document.querySelector('.typing_words')
+const words = [
+    "...designer", 
+    "...creator", 
+    "...problem-solver"
+];
 
 let wordIndex = 0;
 let charIndex = 0;
 let deleteChar = false;
+typeAni = document.querySelector('.type_animation');
 
 const autoType = () => {
     const currentWord = words[wordIndex];
@@ -35,8 +41,13 @@ const autoType = () => {
     } else {
         deleteChar = !deleteChar;
         wordIndex = !deleteChar ? (wordIndex + 1) % words.length : wordIndex;
-        setTimeout(autoType, 1200);
+        setTimeout(autoType, 2000);
     }
+    console.log(charIndex);
+    if (charIndex === 0 || charIndex > currentWord.length - 1) {
+        typeAni.style.animation = "blink 0.7s infinite";
+    } else {
+        typeAni.style.animation = "none"};
 };
 
 autoType();

@@ -1,7 +1,11 @@
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
@@ -27,7 +31,7 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .off-screen_menu {
@@ -44,15 +48,50 @@ header {
     transition: .3s ease;
 }
 
-.section_nav {
+.menu_items {
     color: black;
-    list-style: none;
 }
 
 .menu_btn {
+    position: fixed;
+    margin-left: 75%;
+    margin-top: 1em; 
+    height: 3em;
+    width: 3em;
+    border: .25em solid aliceblue;
+    border-radius: 5px;
+}
+
+.menu_btn span {
+    height: 5px;
+    width: 80%;
+    background-color: aliceblue;
+    border-radius: 25px;
     position: absolute;
-    right: 1em;
-    top: 1em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.menu_btn span:nth-child(1) {
+    top: 25%;
+}
+.menu_btn span:nth-child(3) {
+    top: 75%;
+}
+.menu_btn.active span {
+    background-color: white;
+}
+.menu_btn.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.menu_btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu_btn.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 
@@ -69,7 +108,10 @@ header {
 
 
 h1,
-h2 {
+h2,
+h3,
+.typing_words,
+.type_animation {
     font-weight: 400;
 }
 
@@ -96,3 +138,20 @@ h2 {
     width: 100%;
     height: auto;
 }
+
+.typing_words {
+    color: #50e1a2;
+    z-index: -1;
+}
+
+.type_animation {
+    animation: blink 0.7s infinite;
+    font-size: 1.2em;
+    color: #50e1a2;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+};
