@@ -17,9 +17,9 @@ menuBtn.addEventListener('click', () => {
 
 const typingText = document.querySelector('.typing_words')
 const words = [
-    "...designer", 
-    "...creator", 
-    "...problem-solver"
+    "...DESIGNER", 
+    "...CREATOR", 
+    "...PROBLEM-SOLVER"
 ];
 
 let wordIndex = 0;
@@ -43,7 +43,6 @@ const autoType = () => {
         wordIndex = !deleteChar ? (wordIndex + 1) % words.length : wordIndex;
         setTimeout(autoType, 2000);
     }
-    console.log(charIndex);
     if (charIndex === 0 || charIndex > currentWord.length - 1) {
         typeAni.style.animation = "blink 0.7s infinite";
     } else {
