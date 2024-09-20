@@ -27,7 +27,13 @@ body {
     z-index: -1;
 }
 
+/*  */
+/*  */
+/*  */
 /* HEADER */
+/*  */
+/*  */
+/*  */
 
 header {
     display: flex;
@@ -95,16 +101,13 @@ header {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-
-
-
-
-
+/*  */
+/*  */
+/*  */
 /* MAIN */
-
-
-
-
+/*  */
+/*  */
+/*  */
 
 h1,
 h2,
@@ -174,16 +177,13 @@ h2,
     }
 }
 
-
-
-
-
+/*  */
+/*  */
+/*  */
 /* ABOUT */
-
-
-
-
-
+/*  */
+/*  */
+/*  */
 
 .centered {
     margin: 1em 0;
@@ -205,16 +205,13 @@ h2,
     margin-right: -2em;
 }
 
-
-
-
-
+/*  */
+/*  */
+/*  */
 /* RESUME */
-
-
-
-
-
+/*  */
+/*  */
+/*  */
 
 .section_seperator {
     height: 5px;
@@ -269,17 +266,13 @@ h2,
     margin: 1em 0;
 }
 
-
-
-
-
+/*  */
+/*  */
+/*  */
 /* SKILLS */
-
-
-
-
-
-
+/*  */
+/*  */
+/*  */
 
 .skills_h {
     text-align: center;
@@ -318,16 +311,13 @@ h2,
     margin-top: .5em;
 }
 
-
-
-
-
-
+/*  */
+/*  */
+/*  */
 /* PROJECTS */
-
-
-
-
+/*  */
+/*  */
+/*  */
 
 .project_container {
     display: flex;
@@ -356,17 +346,17 @@ h2,
     color: #50e1a2;
 }
 
-
-
-
-
+/*  */
+/*  */
+/*  */
 /* CONTACT */
+/*  */
+/*  */
+/*  */
 
-
-
-
-
-
+.contact_info_sec {
+    text-align: center;
+}
 
 .contact_img {
     display: block;
@@ -378,6 +368,55 @@ h2,
     margin: auto;
     border: 3px solid #50e1a2;
 }
+
+.contact_name {
+    margin-top: 1em;
+}
+
+.contact_info_h {
+ color: #50e1a2;
+ margin-top: 1em;
+}
+
+/*  */
+/*  */
+/*  */
+/* FOOTER */
+/*  */
+/*  */
+/*  */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em -2em 0 -2em;
+    padding: 1em 0;
+    border: 2px solid #50e1a2;
+    border-style: solid none none none;
+    background-color: rgb(20, 20, 20);
+}
+
+.back_to_top {
+    margin-bottom: 1em;
+    height: 3em;
+    width: 8em;
+    border-radius: 10px;
+    border: 2px solid  #50e1a2;
+    background-color: black;
+    color: aliceblue;
+}
+
+.footer_p {
+    text-align: center;
+    font-size: .75rem;
+}
+
+
+
+
+
+
 
 
 

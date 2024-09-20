@@ -59,3 +59,12 @@ const autoType = () => {
 };
 
 autoType();
+
+/* BACK TO TOP FUNCTION */
+
+const backToTop = document.querySelector('.back_to_top');
+
+backToTop.onclick = function(e) {
+    e.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
