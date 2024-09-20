@@ -2,6 +2,7 @@
 
 const menuBtn = document.querySelector('.menu_btn');
 const offScreenMenu = document.querySelector('.off-screen_menu');
+const resume = document.querySelector('a[href="#resume"]')
 
 menuBtn.addEventListener('click', () => {
     // Check current left position of the menu
@@ -10,6 +11,14 @@ menuBtn.addEventListener('click', () => {
     } else {
         offScreenMenu.style.left = '-250px';
     }
+    menuBtn.classList.toggle('active');
+});
+
+resume.addEventListener('click', () => {
+    console.log('this fired');
+    event.preventDefault();
+    document.getElementById('resume').scrollIntoView({ behavior: 'smooth' });
+    offScreenMenu.style.left = '-250px';
     menuBtn.classList.toggle('active');
 });
 
