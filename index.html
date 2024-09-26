@@ -17,16 +17,24 @@
 <body>
 
     <header>
+        
         <nav class="menu_nav">
             <div class="off-screen_menu">
-                <ul class="menu_items">
-                    <li>HOME</li>
-                    <li>ABOUT</li>
-                    <li><a href="#resume">RESUME</a></li>
-                    <li>SKILLS</li>
-                    <li>PROJECTS</li>
-                    <li>CONTACT</li>
-                </ul>
+                <div class="os_profile">
+                    <h2 class="os_header os_name">DARREN COSTELLOE</h2>
+                    <img src="images/profile.jpeg" alt="Darren Costelloe profile picture" class="os_profile_pic">
+                    <h2 class="os_header"><span class="green_font">FRONT-END</span> DEVELOPER</h2>
+                </div>
+                <nav class="os_nav">
+                    <ul class="menu_items">
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#resume">RESUME</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#projects">PROJECTS</a></li>
+                        <li><a href="#contact_info">CONTACT</a></li>
+                    </ul>
+                </nav>
             </div>
             <div class="menu_btn">
                 <span></span>
@@ -39,28 +47,39 @@
 
     <main>
 
-        <div class="side_trim"></div>
-        <div class="splash_page">
-            <h1 class="name_h">DARREN COSTELLOE</h1>
-            <h2><span class="green_font">FRONT-END </span>DEVELOPER</h2>
-            <div class="profile">
-                <img src="images/profile.jpeg" alt="Darren Costelloe profile picture" class="profile_pic" loading="eager">
+        <section id="home">
+
+            <div class="side_trim"></div>
+            <div class="splash_page">
+                <h1 class="name_h">DARREN COSTELLOE</h1>
+                <h2><span class="green_font">FRONT-END </span>DEVELOPER</h2>
+                <div class="profile">
+                    <img src="images/profile.jpeg" alt="Darren Costelloe profile picture" class="profile_pic" loading="eager">
+                </div>
+                <p class="auto_type">I AM A <span class="typing_words green_font"></span><span class="type_animation">|</span></P>
             </div>
-            <p class="auto_type">I AM A <span class="typing_words green_font"></span><span class="type_animation">|</span></P>
-        </div>
+        
+        </section>
+
+ 
 
         <!-- ABOUT -->
-        
-        <div class="section_container">
-            <h1 class="section_h"><span class="green_font">A</span>BOUT</h1>
-            <span class="section_seperator about_sep"></span>
-        </div>
-        <div class="about_p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ipsa, eos sit necessitatibus est voluptas cumque. In reprehenderit nobis, nostrum laborum repellat voluptatibus asperiores sit quod neque, animi autem eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus esse, voluptates consequuntur quod aliquam! Odit laborum libero eos debitis earum nam iste laudantium, molestiae quia, incidunt, vel vero minus.
-        </div>
-        <div class="profile_b">
-            <img src="images/profile-2.jpg" alt="Darren Costelloe profile picture" loading="lazy" class="profile_pic_b">
-        </div>
+
+        <section id="about">
+
+            <div class="section_container">
+                <h1 class="section_h"><span class="green_font">A</span>BOUT</h1>
+                <span class="section_seperator about_sep"></span>
+            </div>
+            <div class="about_p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ipsa, eos sit necessitatibus est voluptas cumque. In reprehenderit nobis, nostrum laborum repellat voluptatibus asperiores sit quod neque, animi autem eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus esse, voluptates consequuntur quod aliquam! Odit laborum libero eos debitis earum nam iste laudantium, molestiae quia, incidunt, vel vero minus.
+            </div>
+            <div class="profile_b">
+                <img src="images/profile-2.jpg" alt="Darren Costelloe profile picture" loading="lazy" class="profile_pic_b">
+            </div>
+            
+        </section>
+
         
         <!-- RESUME -->
         
@@ -147,61 +166,64 @@
         
         <!-- SKILLS -->
 
-        <div class="section_container centered_h">
-            <span class="section_seperator_left"></span>
-            <h1 class="section_h centered"><span class="green_font">S</span>KILLS</h1>
-            <span class="section_seperator"></span>
-        </div>
+        <section id="skills">
 
-        <h5 class="skills_h">FRONTEND</h4>
+            <div class="section_container centered_h">
+                <span class="section_seperator_left"></span>
+                <h1 class="section_h centered"><span class="green_font">S</span>KILLS</h1>
+                <span class="section_seperator"></span>
+            </div>
+    
+            <h5 class="skills_h">FRONTEND</h4>
+    
+            <div class="skills_wrapper">
+                <div class="skills_container">
+                    <img src="images/html.png" alt="HTML Logo" class="skill_logo">
+                    <p class="skills_p">HTML</p>
+                </div>
+                <div class="skills_container">
+                    <img src="images/css.png" alt="CSS Logo" class="skill_logo">
+                    <p class="skills_p">CSS</p>
+                </div>
+                <div class="skills_container">
+                    <img src="images/javascript.png" alt="Javascript Logo" class="skill_logo">
+                    <p class="skills_p">JAVASCRIPT</p>
+                </div>
+            </div>
+    
+            <h5 class="skills_h">DESIGN</h4>
+    
+            <div class="skills_wrapper">
+                <div class="skills_container">
+                    <img src="images/solidworks.png" alt="Soliworks Logo" class="skill_logo">
+                    <p class="skills_p">SOLIDWORKS</p>
+                </div>
+                <div class="skills_container">
+                    <img src="images/keyshot.png" alt="Keyshot Logo" class="skill_logo">
+                    <p class="skills_p">KEYSHOT</p>
+                </div>
+                <div class="skills_container">
+                    <img src="images/blender.png" alt="Blender Logo" class="skill_logo">
+                    <p class="skills_p">BLENDER</p>
+                </div>
+            </div>
+    
+            <div class="skills_wrapper bottom">
+                <div class="skills_container">
+                    <img src="images/ai.png" alt="Adobe Illustrator Logo" class="skill_logo">
+                    <p class="skills_p">ILLUSTRATOR</p>
+                </div>
+                <div class="skills_container">
+                    <img src="images/ps.png" alt="Adobe Photoshop" class="skill_logo">
+                    <p class="skills_p">PHOTOSHOP</p>
+                </div>
+            </div>
 
-        <div class="skills_wrapper">
-            <div class="skills_container">
-                <img src="images/html.png" alt="HTML Logo" class="skill_logo">
-                <p class="skills_p">HTML</p>
-            </div>
-            <div class="skills_container">
-                <img src="images/css.png" alt="CSS Logo" class="skill_logo">
-                <p class="skills_p">CSS</p>
-            </div>
-            <div class="skills_container">
-                <img src="images/javascript.png" alt="Javascript Logo" class="skill_logo">
-                <p class="skills_p">JAVASCRIPT</p>
-            </div>
-        </div>
-
-        <h5 class="skills_h">DESIGN</h4>
-
-        <div class="skills_wrapper">
-            <div class="skills_container">
-                <img src="images/solidworks.png" alt="Soliworks Logo" class="skill_logo">
-                <p class="skills_p">SOLIDWORKS</p>
-            </div>
-            <div class="skills_container">
-                <img src="images/keyshot.png" alt="Keyshot Logo" class="skill_logo">
-                <p class="skills_p">KEYSHOT</p>
-            </div>
-            <div class="skills_container">
-                <img src="images/blender.png" alt="Blender Logo" class="skill_logo">
-                <p class="skills_p">BLENDER</p>
-            </div>
-        </div>
-
-        <div class="skills_wrapper bottom">
-            <div class="skills_container">
-                <img src="images/ai.png" alt="Adobe Illustrator Logo" class="skill_logo">
-                <p class="skills_p">ILLUSTRATOR</p>
-            </div>
-            <div class="skills_container">
-                <img src="images/ps.png" alt="Adobe Photoshop" class="skill_logo">
-                <p class="skills_p">PHOTOSHOP</p>
-            </div>
-        </div>
+        </section>
         
-
         <!-- PROJECTS -->
 
-        <section id="resume">
+        <section id="projects">
 
             <div class="section_container centered_h">
                 <span class="section_seperator_left"></span>
@@ -269,7 +291,7 @@
 
         </section>
 
-        <section class="contact_info_sec">
+        <section id="contact_info">
             
             <div class="section_container centered_h">
                 <span class="section_seperator_left"></span>

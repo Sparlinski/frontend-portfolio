@@ -2,23 +2,66 @@
 
 const menuBtn = document.querySelector('.menu_btn');
 const offScreenMenu = document.querySelector('.off-screen_menu');
-const resume = document.querySelector('a[href="#resume"]')
 
 menuBtn.addEventListener('click', () => {
-    // Check current left position of the menu
-    if (offScreenMenu.style.left === '-250px' || offScreenMenu.style.left === '') {
+    const menuWidth = parseInt(getComputedStyle(offScreenMenu).width, 10);
+
+    if (offScreenMenu.style.left === `-${menuWidth}px` || offScreenMenu.style.left === '') {
         offScreenMenu.style.left = '0';
     } else {
-        offScreenMenu.style.left = '-250px';
+        offScreenMenu.style.left = `-${menuWidth}px`;
     }
     menuBtn.classList.toggle('active');
 });
 
+/* SCROLL INTO VIEW FUNCTION */
+
+const home = document.querySelector('a[href="#home"]');
+const about = document.querySelector('a[href="#about"]');
+const resume = document.querySelector('a[href="#resume"]');
+const skills = document.querySelector('a[href="#skills"]');
+const projects = document.querySelector('a[href="#projects"]');
+const contactInfo = document.querySelector('a[href="#contact_info"]');
+
+home.addEventListener('click', () => {
+    event.preventDefault();
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
+});
+
+about.addEventListener('click', () => {
+    event.preventDefault();
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
+});
+
 resume.addEventListener('click', () => {
-    console.log('this fired');
     event.preventDefault();
     document.getElementById('resume').scrollIntoView({ behavior: 'smooth' });
-    offScreenMenu.style.left = '-250px';
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
+});
+
+skills.addEventListener('click', () => {
+    event.preventDefault();
+    document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
+});
+
+projects.addEventListener('click', () => {
+    event.preventDefault();
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
+});
+
+contactInfo.addEventListener('click', () => {
+    event.preventDefault();
+    document.getElementById('contact_info').scrollIntoView({ behavior: 'smooth' });
+    offScreenMenu.style.left = `-${menuWidth}px`;
     menuBtn.classList.toggle('active');
 });
 

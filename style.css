@@ -30,7 +30,7 @@ body {
 /*  */
 /*  */
 /*  */
-/* HEADER */
+            /* HEADER */
 /*  */
 /*  */
 /*  */
@@ -44,19 +44,58 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    max-width: 250px;
+    max-width: 270px;
     height: 100vh;
-    left: -250px;
+    left: -270px;
     z-index: 1;
     background-color: aliceblue;
     display: flex;
+    flex-direction: column;
     justify-content: flex;
     padding: 2em;
     transition: .3s ease;
 }
 
-.menu_items {
+.os_header.os_name {
+    font-size: 1.25rem;
+}
+
+.os_header {
     color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.os_profile_pic {
+    display: block;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    margin: auto;
+    border: 3px solid #50e1a2;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: #50e1a2;
+}
+
+
+
+.menu_items {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    margin-top: 3em;
+    gap: 2em;
+    font-size: 1.25rem;
 }
 
 .menu_btn {
@@ -104,7 +143,7 @@ header {
 /*  */
 /*  */
 /*  */
-/* MAIN */
+            /* MAIN */
 /*  */
 /*  */
 /*  */
@@ -180,7 +219,7 @@ h2,
 /*  */
 /*  */
 /*  */
-/* ABOUT */
+            /* ABOUT */
 /*  */
 /*  */
 /*  */
@@ -208,7 +247,7 @@ h2,
 /*  */
 /*  */
 /*  */
-/* RESUME */
+            /* RESUME */
 /*  */
 /*  */
 /*  */
@@ -269,10 +308,11 @@ h2,
 /*  */
 /*  */
 /*  */
-/* SKILLS */
+            /* SKILLS */
 /*  */
 /*  */
 /*  */
+
 
 .skills_h {
     text-align: center;
@@ -299,7 +339,7 @@ h2,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 25%;
+    width: 20%;
 }
 
 .skill_logo {
@@ -314,7 +354,7 @@ h2,
 /*  */
 /*  */
 /*  */
-/* PROJECTS */
+            /* PROJECTS */
 /*  */
 /*  */
 /*  */
@@ -349,12 +389,12 @@ h2,
 /*  */
 /*  */
 /*  */
-/* CONTACT */
+            /* CONTACT */
 /*  */
 /*  */
 /*  */
 
-.contact_info_sec {
+#contact_info {
     text-align: center;
 }
 
@@ -386,7 +426,7 @@ h2,
 /*  */
 /*  */
 /*  */
-/* FOOTER */
+            /* FOOTER */
 /*  */
 /*  */
 /*  */
