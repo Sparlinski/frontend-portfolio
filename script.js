@@ -65,6 +65,27 @@ contactInfo.addEventListener('click', () => {
     menuBtn.classList.toggle('active');
 });
 
+/* const menuItems = [
+    { selector: 'a[href="#home"]', target: 'home' },
+    { selector: 'a[href="#about"]', target: 'about' },
+    { selector: 'a[href="#resume"]', target: 'resume' },
+    { selector: 'a[href="#skills"]', target: 'skills' },
+    { selector: 'a[href="#projects"]', target: 'projects' },
+    { selector: 'a[href="#contact_info"]', target: 'contact_info' },
+];
+
+const handleMenuClick = (event, targetId) => {
+    event.preventDefault();
+    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
+};
+
+menuItems.forEach(item => {
+    const link = document.querySelector(item.selector);
+    link.addEventListener('click', (event) => handleMenuClick(event, item.target));
+}); */
+
 /* AUTO TYPING FUNCTION */
 
 const typingText = document.querySelector('.typing_words')
