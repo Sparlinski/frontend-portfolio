@@ -6,3 +6,25 @@ font-weights = 300 to 800
 
 COLORS
 
+black - #000000
+white - #f0f8ff
+neon green - #50e1a2;
+
+SCREEN SIZES
+
+Extra small devices (phones, 320px and up)
+@media (min-width: 320px)
+
+Small devices (tablets, 600px and up)
+@media (min-width: 600px)
+
+
+Medium devices (laptops, 768px and up)
+@media (min-width: 768px)
+
+Large devices (desktops, 992px and up)
+@media (min-width: 992px)
+
+
+Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)

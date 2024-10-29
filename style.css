@@ -42,7 +42,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex;
-    padding: 2em;
+    padding: 1em 2em;
     transition: .3s ease;
 }
 
@@ -81,8 +81,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     color: black;
-    margin-top: 3em;
-    gap: 2em;
+    margin-top: 1.5em;
+    gap: 1.25em;
     font-size: 1.25rem;
 }
 
@@ -130,6 +130,59 @@ a:hover {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+@media (min-width: 600px) {
+    
+    .off-screen_menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        max-width: 500px;
+        height: 100vh;
+        left: -500px;
+        z-index: 1;
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex;
+        padding: 1em 2em;
+        transition: .3s ease;
+    }
+    
+    .os_header.os_name {
+        font-size: 2rem;
+    }
+    
+    .os_header {
+        color: black;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 1em 0;
+    }
+    
+    .os_profile_pic {
+        display: block;
+        width: 15em;
+        height: 15em;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+        margin: auto;
+        border: 3px solid #50e1a2;
+    }
+    
+    .menu_items {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: black;
+        margin-top: 1em;
+        margin-left: 2em;
+        gap: 1em;
+        font-size: 1.75rem;
+    }
+}
+
 /*  */
 /*  */
 /*  */
@@ -144,14 +197,17 @@ h3,
 h4,
 h5,
 .auto_type,
+.auto_type_b,
 .typing_words,
-.type_animation {
+.typing_words_b,
+.type_animation,
+.typing_animation_b {
     font-weight: 400;
     margin: 0;
     padding: 0;
 }
 
-.section_h {
+h1.section_h {
     font-size: 2rem;
 }
 
@@ -180,56 +236,52 @@ h5,
     z-index: -1;
 }
 
-@media (max-width: 320px) {
-    .side_trim {
-        display: none;
-    }
+.splash_page_landscape {
+    display: none;
 }
 
 h1.name_h {
-    font-size: clamp(1.6rem, 3vw, 3rem);
+    font-size: clamp(1.6rem, 5vw, 5rem);
 }
 
-h2,
-.auto_type {
-    font-size: 1.2rem;
+h2.title_h,
+.auto_type,
+.auto_type_b {
+    font-size: clamp(1.2rem, 3vw, 3rem);
 }
 
 .green_font {
     color: #50e1a2;
 }
 
-.profile_pic,
-.profile_pic_b {
-    object-fit: contain;
+.profile_pic {
     width: 80%;
-    max-width: 425px;
+    max-width: 350px;
     height: auto;
     border-radius: 15px;
 }
 
-.typing_words {
+.typing_words,
+.typing_words_b {
     color: #50e1a2;
 }
 
-.type_animation {
+.type_animation,
+.type_animation_b {
     animation: blink 0.7s infinite;
     font-size: 1.2em;
     color: #50e1a2;
 }
 
 .profile_pic,
-.splash_page {
+.splash_page_a,
+.splash_page_b {
     margin-left: 2em;
 }
 
-.profile_pic {
-    margin-top: 2em;
-    margin-bottom: .5em;
-}
-
-.splash_page.sp_a {
+.splash_page_a {
     padding-top: 4em;
+    margin-bottom: 1em;
 }
 
 @keyframes blink {
@@ -237,6 +289,70 @@ h2,
         opacity: 0;
     }
 }
+
+/* MOBILE */
+
+@media only screen and (max-width: 798px) and (orientation: landscape) {
+    body {
+        background-color: #50e1a2;
+    }
+}
+
+
+/* TABLET */
+
+@media (min-width: 600px) {
+    .splash_page_portrait {
+        display: none;
+    }
+
+    #home {
+        display: flex;
+    }
+
+    .splash_page_landscape {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 4em;
+        width: 100%;
+    }
+    
+    .profile_pic {
+        width: 40%;
+        max-width: 600px;
+        margin-left: 2em;
+    }
+    
+    .splash_page_a,
+    .splash_page_b {
+        margin-left: 0;
+    }
+    
+    .splash_page_a {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .splash_page_landscape {
+        display: none;
+    }
+
+    .splash_page_portrait {
+        display: flex;
+        flex-direction: column;
+        margin: 6em 0 0 5em;
+    }
+
+    .profile_pic {
+        width: 100%;
+        max-width: 600px;
+        margin: 2em 0;
+    }
+}
+
+
 
 /*  */
 /*  */
@@ -481,6 +597,7 @@ footer {
     border-radius: 10px;
     border: 2px solid  #50e1a2;
     background-color: black;
+    font-size: .8rem;
     color: aliceblue;
 }
 

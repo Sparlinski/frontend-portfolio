@@ -65,28 +65,9 @@ contactInfo.addEventListener('click', () => {
     menuBtn.classList.toggle('active');
 });
 
-/* const menuItems = [
-    { selector: 'a[href="#home"]', target: 'home' },
-    { selector: 'a[href="#about"]', target: 'about' },
-    { selector: 'a[href="#resume"]', target: 'resume' },
-    { selector: 'a[href="#skills"]', target: 'skills' },
-    { selector: 'a[href="#projects"]', target: 'projects' },
-    { selector: 'a[href="#contact_info"]', target: 'contact_info' },
-];
-
-const handleMenuClick = (event, targetId) => {
-    event.preventDefault();
-    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-    offScreenMenu.style.left = `-${menuWidth}px`;
-    menuBtn.classList.toggle('active');
-};
-
-menuItems.forEach(item => {
-    const link = document.querySelector(item.selector);
-    link.addEventListener('click', (event) => handleMenuClick(event, item.target));
-}); */
-
 /* AUTO TYPING FUNCTION */
+
+/* SPLASH PAGE A TYPE FUNCTION */
 
 const typingText = document.querySelector('.typing_words')
 const words = [
@@ -123,6 +104,44 @@ const autoType = () => {
 };
 
 autoType();
+
+/* SPLASH PAGE B TYPE FUNCTION */
+
+const typingText_b = document.querySelector('.typing_words_b')
+const words_b = [
+    "...DESIGNER", 
+    "...CREATOR", 
+    "...PROBLEM-SOLVER"
+];
+
+let wordIndex_b = 0;
+let charIndex_b = 0;
+let deleteChar_b = false;
+typeAni_b = document.querySelector('.type_animation_b');
+
+const autoType_b = () => {
+    const currentWord = words_b[wordIndex_b];
+    const currentChar = currentWord.substring(0, charIndex_b);
+    typingText_b.textContent = currentChar;
+
+    if (!deleteChar_b && charIndex_b < currentWord.length) {
+        charIndex_b++;
+        setTimeout(autoType_b, 100);
+    } else if (deleteChar_b && charIndex_b > 0) {
+        charIndex_b--;
+        setTimeout(autoType_b, 50);
+    } else {
+        deleteChar_b = !deleteChar_b;
+        wordIndex_b = !deleteChar_b ? (wordIndex_b + 1) % words_b.length : wordIndex_b;
+        setTimeout(autoType_b, 2000);
+    }
+    if (charIndex_b === 0 || charIndex_b > currentWord.length - 1) {
+        typeAni_b.style.animation = "blink 0.7s infinite";
+    } else {
+        typeAni_b.style.animation = "none"};
+};
+
+autoType_b();
 
 /* BACK TO TOP FUNCTION */
 
