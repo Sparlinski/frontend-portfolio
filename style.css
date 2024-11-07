@@ -41,9 +41,10 @@ header {
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
-    justify-content: flex;
+    justify-content: space-between;
     padding: 1em 2em;
     transition: .3s ease;
+    overflow-y: auto;
 }
 
 .os_header.os_name {
@@ -55,17 +56,19 @@ header {
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
-    margin: 1em 0;
 }
 
 .os_profile_pic {
     display: block;
-    width: 10em;
-    height: 10em;
+    width: 50%;
+    max-width: 200px;
+    aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
     margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
     border: 3px solid #50e1a2;
 }
 
@@ -77,12 +80,23 @@ a:hover {
     color: #50e1a2;
 }
 
+.os_nav {
+    flex-grow: 1;
+    margin-top: 2em;
+    padding-bottom: 4em;
+}
+
+i {
+    width: 1em;
+    margin-right: 1em;
+}
+
 .menu_items {
     display: flex;
+    height: 100%;
     flex-direction: column;
+    justify-content: space-around;
     color: black;
-    margin-top: 1.5em;
-    gap: 1.25em;
     font-size: 1.25rem;
 }
 
@@ -130,56 +144,34 @@ a:hover {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-@media (min-width: 600px) {
+/* Tablet */
+
+@media only screen and (min-width: 600px) {
     
     .off-screen_menu {
-        position: fixed;
-        top: 0;
-        width: 100%;
         max-width: 500px;
-        height: 100vh;
         left: -500px;
-        z-index: 1;
-        background-color: aliceblue;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex;
-        padding: 1em 2em;
-        transition: .3s ease;
     }
     
     .os_header.os_name {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 2.25vw, 2.25rem);
     }
     
     .os_header {
-        color: black;
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-align: center;
-        margin: 1em 0;
+        font-size: clamp(1.25rem, 1.75vw, 1.75rem);
     }
-    
-    .os_profile_pic {
-        display: block;
-        width: 15em;
-        height: 15em;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: center top;
-        margin: auto;
-        border: 3px solid #50e1a2;
-    }
-    
+
     .menu_items {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        color: black;
-        margin-top: 1em;
-        margin-left: 2em;
+        font-size: clamp(1.25rem, 2vw, 2rem);
         gap: 1em;
-        font-size: 1.75rem;
+        margin-left: 1.5em;
+        max-height: 750px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .side_trim {
+        display: none;
     }
 }
 
@@ -221,9 +213,10 @@ h1.section_h {
 
 #home {
     position: relative;
-    height: 100vh;
     width: 100%;
+    min-height: 100vh;
     margin-bottom: 2em;
+    padding: 2em 0;
 }
 
 .side_trim {
@@ -241,6 +234,7 @@ h1.section_h {
 }
 
 h1.name_h {
+    white-space: nowrap;
     font-size: clamp(1.6rem, 5vw, 5rem);
 }
 
@@ -255,6 +249,7 @@ h2.title_h,
 }
 
 .profile_pic {
+    
     width: 80%;
     max-width: 350px;
     height: auto;
@@ -290,18 +285,9 @@ h2.title_h,
     }
 }
 
-/* MOBILE */
-
-@media only screen and (max-width: 798px) and (orientation: landscape) {
-    body {
-        background-color: #50e1a2;
-    }
-}
-
-
 /* TABLET */
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
     .splash_page_portrait {
         display: none;
     }
@@ -368,19 +354,51 @@ h2.title_h,
     align-items: center;
 }
 
+h1.section_h {
+    font-size: clamp(1.5rem, 4vw, 4rem);
+}
+ 
 .section_container.about_sec {
     margin-left: 2em;
 }
 
 .about_p {
-    margin: 0 2em;
+    font-size: clamp(1rem, 1.75vw, 1.75rem);
+    margin: 1em 2em;
+    text-wrap: pretty;
 }
 
 .profile_pic_b {
     display: block;
     margin: auto;
     width: 60%;
+    max-width: 475px;
     margin-top: 2em;
+}
+
+@media only screen and (min-width: 600px) {
+    .about_container {
+        display: flex;
+        padding: 2em;
+    }
+    
+    .section_container.about_sec {
+        margin-left: 2em;
+    }
+    
+    .about_p {
+        margin: 0;
+    }
+    
+    .profile_pic_b {
+        display: block;
+        margin: auto;
+        width: 40%;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 4em;
+    }
 }
 
 /*  */
