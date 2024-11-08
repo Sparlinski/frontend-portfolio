@@ -306,7 +306,7 @@ h2.title_h,
     
     .profile_pic {
         width: 40%;
-        max-width: 600px;
+        max-width: 500px;
         margin-left: 2em;
     }
     
@@ -355,7 +355,7 @@ h2.title_h,
 }
 
 h1.section_h {
-    font-size: clamp(1.5rem, 4vw, 4rem);
+    font-size: clamp(2rem, 4vw, 4rem);
 }
  
 .section_container.about_sec {
@@ -374,6 +374,7 @@ h1.section_h {
     width: 60%;
     max-width: 475px;
     margin-top: 2em;
+    border-radius: 25px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -438,7 +439,7 @@ h1.section_h {
     border: 2px solid #50e1a2;
     border-radius: 15px;
     margin: 1em 1em;
-    padding: .5em;
+    padding: 1em;
 }
 
 .underline {
@@ -449,24 +450,44 @@ h1.section_h {
 }
 
 .resume_h {
-    font-style: italic;
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+h3.resume_sec_h,
+h4.resume_h.company {
+    font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
 .resume_h.company {
-    font-size: 1.25rem;
+    font-style: italic;
 }
 
 .resume_p {
     margin: .5em 0;
 }
 
+.resume_p,
+.resume_summary {
+    font-size: clamp(1rem, 1.75vw, 1.75rem);
+}
+
 .resume_logo {
     width: 20%;
+    max-width: 100px;
 }
 
 .underline.thin {
     height: .5px;
     margin: 1em 0;
+}
+
+@media only screen and (min-width: 600px) {   
+    .resume_sections {
+        margin: 2em 2em;
+    }
+    .last_resume_sec {
+        margin-bottom: 10em;
+    }
 }
 
 /*  */
@@ -480,10 +501,10 @@ h1.section_h {
 
 .skills_h {
     text-align: center;
-    font-size: 1.15rem;
+    font-size: clamp(1.25rem, 2vw, 2rem);
     font-style: oblique;
     border: 1px solid aliceblue;
-    border-style: solid none solid none; 
+    border-style: solid none solid none;
 }
 
 .skills_wrapper {
@@ -495,6 +516,9 @@ h1.section_h {
 
 .skills_wrapper.bottom {
     justify-content: space-around;
+    border-bottom: 1px solid aliceblue;
+    padding-bottom: 2em;
+    margin-bottom: 8em;
 }
 
 .skills_container {
@@ -505,13 +529,21 @@ h1.section_h {
 }
 
 .skill_logo {
-    width: 60%;
+    width: 55%;
+    max-width: 250px;
 }
 
 .skills_p {
-    font-size: .9rem;
+    font-size: clamp(.9rem, 1.2vw, 1.25rem);
     margin-top: .5em;
 }
+
+@media only screen and (min-width: 600px) {
+    .skills_wrapper.bottom {
+        margin-bottom: 10em;
+    }
+}
+
 
 /*  */
 /*  */
@@ -520,6 +552,12 @@ h1.section_h {
 /*  */
 /*  */
 /*  */
+
+.projects_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .project_wrapper {
     margin: 0 1em;
@@ -531,9 +569,10 @@ h1.section_h {
     width: 100%;
 }
 
-.project_h {
+h3.project_h {
     font-style: italic;
     white-space: nowrap;
+    font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
 .project_sep {
@@ -542,6 +581,7 @@ h1.section_h {
 
 .project_img {
     width: 100%;
+    max-width: 800px;
     border-radius: 10px;
     margin: .5em 0;
 }
@@ -550,7 +590,16 @@ h1.section_h {
     margin-right: 1em;
     margin-bottom: 1.5em;
     color: #50e1a2;
+    font-size: clamp(1rem, 1.75vw, 1.75rem);
 }
+
+@media only screen and (min-width: 600px) {
+    .projects_nav {
+        margin-bottom: 10em;
+    }
+}
+
+
 
 /*  */
 /*  */
@@ -566,8 +615,9 @@ h1.section_h {
 
 .contact_img {
     display: block;
-    width: 12em;
-    height: 12em;
+    width: 50%;
+    max-width: 300px;
+    aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
@@ -575,18 +625,38 @@ h1.section_h {
     border: 3px solid #50e1a2;
 }
 
-.contact_name {
+h2.contact_name {
     margin-top: 1em;
+    font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
-.contact_info_h {
+h3.contact_info_h {
  color: #50e1a2;
  margin-top: 1em;
+ font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
 .phone_num {
     color: inherit;
     text-decoration: none;
+}
+
+.contact_info {
+    font-size: clamp(1rem, 1.5vw, 1.5rem)
+}
+
+.back_to_top {
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    height: 3em;
+    width: 8em;
+    border-radius: 10px;
+    border: 2px solid  #50e1a2;
+    background-color: black;
+    font-size: .8rem;
+    color: aliceblue;
 }
 
 /*  */
@@ -601,8 +671,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4em 0 0 0;
-    padding: 1em 0;
+    margin: 2em 0 0 0;
+    padding: 2em 0;
     border: 2px solid #50e1a2;
     border-style: solid none none none;
     background-color: rgb(20, 20, 20);

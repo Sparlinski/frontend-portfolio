@@ -19,12 +19,12 @@ Small devices (tablets, 600px and up)
 @media (min-width: 600px)
 
 
-Medium devices (laptops, 768px and up)
+Medium devices (laptops, 800px and up)
 @media (min-width: 768px)
 
-Large devices (desktops, 992px and up)
+Large devices (desktops, 1000px and up)
 @media (min-width: 992px)
 
 
-Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px)
+Extra large devices (large desktops, ipad pros, 1250px and up)
+@media (min-width: 1250px)
