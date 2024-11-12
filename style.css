@@ -48,12 +48,12 @@ header {
 }
 
 .os_header.os_name {
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 1.75vw, 1.75rem);
 }
 
 .os_header {
     color: black;
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     font-weight: bold;
     text-align: center;
 }
@@ -82,8 +82,6 @@ a:hover {
 
 .os_nav {
     flex-grow: 1;
-    margin-top: 2em;
-    padding-bottom: 4em;
 }
 
 i {
@@ -95,9 +93,10 @@ i {
     display: flex;
     height: 100%;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 2em 0 4em 0;
     color: black;
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
 .menu_btn {
@@ -144,34 +143,45 @@ i {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/* Tablet */
 
 @media only screen and (min-width: 600px) {
     
     .off-screen_menu {
-        max-width: 500px;
-        left: -500px;
+        max-width: 400px;
+        left: -400px;
     }
     
-    .os_header.os_name {
-        font-size: clamp(1.5rem, 2.25vw, 2.25rem);
-    }
-    
-    .os_header {
-        font-size: clamp(1.25rem, 1.75vw, 1.75rem);
-    }
-
-    .menu_items {
-        font-size: clamp(1.25rem, 2vw, 2rem);
-        gap: 1em;
-        margin-left: 1.5em;
-        max-height: 750px;
-    }
 }
 
 @media only screen and (max-width: 350px) {
     .side_trim {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    .menu_btn {
+        display: none;
+    }
+
+    .off-screen_menu {
+        position: fixed;
+        top: 0;
+        width: 22.5%;
+        left: 0px;
+        border: 5px solid #50e1a2;
+        border-style: none solid none none;
+    }
+
+    body {
+        padding-left: 22.5%;
+    }
+
+    .menu_items {
+        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+        justify-content: space-around;
+        padding: 1em 0;
+
     }
 }
 
@@ -338,7 +348,43 @@ h2.title_h,
     }
 }
 
+@media only screen and (min-width: 1450px) {
+    .splash_page_portrait {
+        display: none;
+    }
 
+    #home {
+        display: flex;
+    }
+
+    .splash_page_landscape {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        padding: 0 6em;
+    }
+
+    .profile_pic {
+        width: 40%;
+        max-width: none;
+        margin: 0;
+    }
+
+    h1.name_h {
+        white-space: nowrap;
+        font-size: clamp(3rem, 3.5vw, 3.5rem);
+    }
+
+    h2.title_h,
+    .auto_type,
+    .auto_type_b {
+        font-size: clamp(1rem, 2vw, 2rem);
+    }
+
+    
+}
 
 /*  */
 /*  */
@@ -389,6 +435,7 @@ h1.section_h {
     
     .about_p {
         margin: 0;
+        padding-right: 4em;
     }
     
     .profile_pic_b {
@@ -398,7 +445,22 @@ h1.section_h {
         height: auto;
         margin-top: 0;
         margin-bottom: 0;
-        margin-left: 4em;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    h1.section_h {
+        font-size: clamp(1.75rem, 3vw, 3rem);
+    }   
+
+    .about_p {
+        margin: 0;
+        font-size: clamp(1rem, 1.25vw, 1.25rem);
+        padding-right: 4em;
+    }
+
+    .profile_pic_b {
+        width: 35%;
     }
 }
 
@@ -481,14 +543,73 @@ h4.resume_h.company {
     margin: 1em 0;
 }
 
-@media only screen and (min-width: 600px) {   
-    .resume_sections {
+
+@media only screen and (min-width: 800px) {
+    .resume_main_container {
+        display: flex;
+        gap: 2em;
+        margin-bottom: 10em;
         margin: 2em 2em;
     }
-    .last_resume_sec {
-        margin-bottom: 10em;
+
+    .resume_sections {
+        margin: 0;
+    }
+
+    .resume_sections.education {
+        height: 100%;
+    }
+
+    .resume_sections.education,
+    .resume_sections.summary {
+        background-color: rgba(80, 225, 162, 25%);
+    }
+
+    .resume_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .resume_wrapper_a {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .resume_wrapper_b {
+        min-width: 60%;
+    }
+
+    .resume_logo.edu {
+        width: 25%;
+        max-width: none;
     }
 }
+
+@media only screen and (min-width: 1450px) {
+    .resume_p,
+    .resume_summary, 
+    .resume_h {
+        font-size: 1rem;
+    }
+
+    h3.resume_sec_h,
+    h4.resume_h.company {
+        font-size: 1.35rem;
+    }
+
+    .resume_logo {
+        width: 10%;
+        max-width: none;
+    }
+
+    .resume_logo.edu {
+        width: 25%;
+    }
+}
+
 
 /*  */
 /*  */
@@ -544,6 +665,20 @@ h4.resume_h.company {
     }
 }
 
+@media only screen and (min-width: 1450px) {
+    .skills_h {
+        font-size: 1.5rem;
+    }
+
+    .skill_logo {
+        width: 25%;
+        max-width: none;
+    }
+
+    .skills_p {
+        font-size: 1rem;
+    }
+}
 
 /*  */
 /*  */
@@ -596,6 +731,25 @@ h3.project_h {
 @media only screen and (min-width: 600px) {
     .projects_nav {
         margin-bottom: 10em;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    .project_wrapper {
+        margin: 0 1em;
+        width: 60%;
+    }   
+
+    .project_img {
+        max-width: none;
+    }
+
+    h3.project_h {
+        font-size: 1.75rem;
+    }
+
+    .project_tags {
+        font-size: 1.5rem;
     }
 }
 
@@ -657,6 +811,25 @@ h3.contact_info_h {
     background-color: black;
     font-size: .8rem;
     color: aliceblue;
+}
+
+@media only screen and (min-width:1450px) {
+    .contact_img {
+        width: 15%;
+        max-width: none;
+    }
+
+    h2.contact_name {
+        font-size: 1.75rem;
+    }
+
+    h3.contact_info_h {
+        font-size: 1.25rem;
+       }
+
+       .contact_info {
+        font-size: 1rem;
+    }
 }
 
 /*  */
