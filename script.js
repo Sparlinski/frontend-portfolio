@@ -3,16 +3,8 @@
 const menuBtn = document.querySelector('.menu_btn');
 const offScreenMenu = document.querySelector('.off-screen_menu');
 
-let menuWidth;
-
-function updateMenuWidth() {
-    menuWidth = parseInt(getComputedStyle(offScreenMenu).width, 10);
-}
-
-updateMenuWidth();
-
 menuBtn.addEventListener('click', () => {
-    updateMenuWidth();
+    const menuWidth = parseInt(getComputedStyle(offScreenMenu).width, 10);
 
     if (offScreenMenu.style.left === `-${menuWidth}px` || offScreenMenu.style.left === '') {
         offScreenMenu.style.left = '0';
@@ -31,47 +23,47 @@ const skills = document.querySelector('a[href="#skills"]');
 const projects = document.querySelector('a[href="#projects"]');
 const contactInfo = document.querySelector('a[href="#contact_info"]');
 
-function closeMenu() {
-    offScreenMenu.style.left = `-${menuWidth}px`;
-    menuBtn.classList.toggle('active');
-}
-
 home.addEventListener('click', (event) => {
     event.preventDefault();
     document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
-    closeMenu();
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
 });
 
 about.addEventListener('click', (event) => {
     event.preventDefault();
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-    closeMenu();
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
 });
 
 resume.addEventListener('click', (event) => {
     event.preventDefault();
     document.getElementById('resume').scrollIntoView({ behavior: 'smooth' });
-    closeMenu();
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
 });
 
 skills.addEventListener('click', (event) => {
     event.preventDefault();
     document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
-    closeMenu();
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
 });
 
 projects.addEventListener('click', (event) => {
     event.preventDefault();
     document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-    closeMenu();
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
 });
 
 contactInfo.addEventListener('click', (event) => {
     event.preventDefault();
     document.getElementById('contact_info').scrollIntoView({ behavior: 'smooth' });
-    closeMenu();
+    offScreenMenu.style.left = `-${menuWidth}px`;
+    menuBtn.classList.toggle('active');
 });
-
 
 /* AUTO TYPING FUNCTION */
 
