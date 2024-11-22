@@ -167,18 +167,19 @@ i {
     .off-screen_menu {
         position: fixed;
         top: 0;
-        width: 22.5%;
+        width: 20%;
+        max-width: none;
         left: 0px;
         border: 5px solid #50e1a2;
         border-style: none solid none none;
     }
 
     body {
-        padding-left: 22.5%;
+        padding-left: 20%;
     }
 
     .menu_items {
-        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+        font-size: 1.75rem;
         justify-content: space-around;
         padding: 1em 0;
 
@@ -455,12 +456,17 @@ h1.section_h {
 
     .about_p {
         margin: 0;
-        font-size: clamp(1rem, 1.25vw, 1.25rem);
+        font-size: 1.5rem;
         padding-right: 4em;
     }
 
     .profile_pic_b {
-        width: 35%;
+        width: 30%;
+        max-width: none;
+    }
+
+    .about_container {
+        margin-bottom: 20em;
     }
 }
 
@@ -592,12 +598,12 @@ h4.resume_h.company {
     .resume_p,
     .resume_summary, 
     .resume_h {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     h3.resume_sec_h,
     h4.resume_h.company {
-        font-size: 1.35rem;
+        font-size: 1.5rem;
     }
 
     .resume_logo {
@@ -666,6 +672,11 @@ h4.resume_h.company {
 }
 
 @media only screen and (min-width: 1450px) {
+    
+    .top-skill {
+        margin-top: 7.5em;
+    }
+
     .skills_h {
         font-size: 1.5rem;
     }
@@ -677,6 +688,10 @@ h4.resume_h.company {
 
     .skills_p {
         font-size: 1rem;
+    }
+
+    .skills_wrapper.bottom {
+        margin-bottom: 17.5em;
     }
 }
 
@@ -691,11 +706,9 @@ h4.resume_h.company {
 .projects_nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.project_wrapper {
-    margin: 0 1em;
+    margin: auto;
+    width: 80%;
+    max-width: 900px;
 }
 
 .project_container {
@@ -716,14 +729,13 @@ h3.project_h {
 
 .project_img {
     width: 100%;
-    max-width: 800px;
-    border-radius: 10px;
+    border-radius: 25px;
     margin: .5em 0;
 }
 
 .project_tags {
     margin-right: 1em;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
     color: #50e1a2;
     font-size: clamp(1rem, 1.75vw, 1.75rem);
 }
@@ -735,22 +747,21 @@ h3.project_h {
 }
 
 @media only screen and (min-width: 1450px) {
-    .project_wrapper {
-        margin: 0 1em;
-        width: 60%;
-    }   
 
-    .project_img {
+    .projects_nav {
+        width: 70%;
         max-width: none;
     }
 
     h3.project_h {
-        font-size: 1.75rem;
+        font-size: 2.25rem;
     }
 
     .project_tags {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+        margin-bottom: 4em;
     }
+
 }
 
 
@@ -815,20 +826,20 @@ h3.contact_info_h {
 
 @media only screen and (min-width:1450px) {
     .contact_img {
-        width: 15%;
+        width: 20%;
         max-width: none;
     }
 
     h2.contact_name {
-        font-size: 1.75rem;
+        font-size: 3rem;
     }
 
     h3.contact_info_h {
-        font-size: 1.25rem;
+        font-size: 2rem;
        }
 
        .contact_info {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -865,6 +876,12 @@ footer {
 .footer_p {
     text-align: center;
     font-size: .75rem;
+}
+
+@media only screen and (min-width:1450px) {
+    .footer_p {
+        font-size: 1rem;
+    }
 }
 
 
