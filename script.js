@@ -2,19 +2,14 @@
 
 const menuBtn = document.querySelector('.menu_btn');
 const offScreenMenu = document.querySelector('.off-screen_menu');
-
-// Declare menuWidth globally
 let menuWidth = parseInt(getComputedStyle(offScreenMenu).width, 10);
 
-// Update menuWidth whenever the window is resized
 window.addEventListener('resize', () => {
     menuWidth = parseInt(getComputedStyle(offScreenMenu).width, 10);
 });
 
 menuBtn.addEventListener('click', () => {
     const isLargeScreen = window.matchMedia('(min-width: 1450px)').matches;
-
-    // If viewport width is 1450px or greater, prevent off-screen menu from moving
     if (!isLargeScreen) {
         if (offScreenMenu.style.left === `-${menuWidth}px` || offScreenMenu.style.left === '') {
             offScreenMenu.style.left = '0';
@@ -45,7 +40,6 @@ menuLinks.forEach(link => {
 
         const isLargeScreen = window.matchMedia('(min-width: 1450px)').matches;
 
-        // Prevent the menu from closing on large screens
         if (!isLargeScreen) {
             offScreenMenu.style.left = `-${menuWidth}px`;
             menuBtn.classList.toggle('active');
